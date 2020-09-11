@@ -33,8 +33,8 @@ There are two kind of labels:
 #### Triage column
 
 Catch-all column. Anything filed in this repository goes to this column.
-Triage should happen regularly and the column should not have many cards. A number of 20 should
-be the maximum.
+Triage should happen regularly and the column should not have many cards.
+An exception to this are the cards that hold the `pr-welcome` label.
 
 A card from here either moves to the `Backlog`, `Next Items` or it is closed.
 
