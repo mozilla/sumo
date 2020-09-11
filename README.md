@@ -19,8 +19,12 @@ There are two kind of labels:
 
 - Labels that correspond to a specific project (kitsune vs respond). There are as many labels as the projects that the team is working on.
 - Labels used to highlight an issue. This is a short list of labels.
+
   - Bug:
     Something is not working properly.
+
+    _Any issue that has the bug label should also be assigned to the KTLO GitHub milestone regardless of the severity of the bug._
+
   - Pr-welcome:
     Tasks friendly to new contributors. These tasks are only closed when they are done.
 
@@ -32,7 +36,7 @@ Catch-all column. Anything filed in this repository goes to this column.
 Triage should happen regularly and the column should not have many cards. A number of 20 should
 be the maximum.
 
-A card from here either moves to the backlog or it is closed.
+A card from here either moves to the `Backlog`, `Next Items` or it is closed.
 
 **A card can be closed, even if it is valid, if it is not going to be worked on in more than six months**.
 
