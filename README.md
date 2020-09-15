@@ -1,6 +1,6 @@
-# sumo-project
+# Mozilla Sumo & Community
 
-This repository is used to track anything related to the platform that powers SUMO
+This repository is used to track anything related to the platform that powers SUMO, Playstore Support and Community Projects.
 
 ## Engineering Board
 
