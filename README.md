@@ -4,11 +4,39 @@ This repository is used to track anything related to the platform that powers SU
 
 ## Engineering Board
 
-Short description of the workflow and of the columns in the board.
+Short description of the current workflow of the team.
 
-### GitHub Milestones
+We are working mostly with projects. A project signifies the team's focus for a period of time. Usually we are are working on a single project per property at a time.
+A project is defined as a standalone chunk of work for a specific property. Recent examples of projects were the redesign of the SUMO site, integrating Firefox Accounts etc.
 
-Mostly used for grouping for long standing projects such as KTLO work.
+Work outside of projects usually falls under the Keep the Lights On category (KTLO).
+
+### GitHub Milestones and Epics
+
+We are using milestones to better organize the work that a project needs in order to be completed. A milestone is a concrete chunk of work and is organized into epics. A milestone can have one or more epics. Epics contain the individual tasks.
+
+An example of the above structure is:
+
+- Site Redesign - project
+  - create designs - milestone
+    - Epic1
+      - GH issue
+      - GH issue
+      - GH issue
+    - Epic2
+      - GH issue
+      - GH issue
+  - implement designs - milestone
+    - Epic1
+      - GH issue
+      - GH issue
+      - GH issue
+    - Epic2
+      - GH issue
+      - GH issue
+      - GH issue
+
+The only execption to the above is the KTLO milestone. It has no epics and it is used as a group selector for all tasks in all properties.
 
 ### Labels
 
@@ -42,6 +70,10 @@ An exception to this are the cards that hold the `pr-welcome` label.
 A card from here either moves to the `Backlog`, `Next Items` or it is closed.
 
 **A card can be closed, even if it is valid, if it is not going to be worked on in more than six months**.
+
+#### Epics
+
+The list of epics for the project that the team works on. Epics stay in this column until all tasks are done and then are closed.
 
 #### Backlog column
 
