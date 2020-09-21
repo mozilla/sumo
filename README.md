@@ -13,30 +13,30 @@ Work outside of projects usually falls under the Keep the Lights On category (KT
 
 ### GitHub Milestones and Epics
 
-We are using milestones to better organize the work that a project needs in order to be completed. A milestone is a concrete chunk of work and is organized into epics. A milestone can have one or more epics. Epics contain the individual tasks.
+We are using epics to better organize the work that a project needs in order to be completed. An epic is a concrete chunk of work and is organized into milestones. An epic can have one or more milestones. Milestones contain the individual tasks.
 
 An example of the above structure is:
 
 - Site Redesign - project
-  - create designs - milestone
-    - Epic1
+  - create designs - Epic
+    - Milestone1
       - GH issue
       - GH issue
       - GH issue
-    - Epic2
+    - Milestone2
       - GH issue
       - GH issue
-  - implement designs - milestone
-    - Epic1
+  - implement designs - Epic
+    - Milestone3
       - GH issue
       - GH issue
       - GH issue
-    - Epic2
+    - Milestone4
       - GH issue
       - GH issue
       - GH issue
 
-The only execption to the above is the KTLO milestone. It has no epics and it is used as a group selector for all tasks in all properties.
+The only execption to the above is the KTLO milestone. It does not belong to any epics and it is used as a group selector for all tasks in all properties.
 
 ### Labels
 
