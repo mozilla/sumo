@@ -48,7 +48,7 @@ There are two kind of labels:
 - Labels that correspond to a specific project (kitsune vs respond). There are as many labels as the projects that the team is working on. Available labels are:
   - Kitsune
   - Respond
-  - Community Portal
+  - Community projects
 - Labels used to highlight an issue. This is a short list of labels.
 
   - Bug:
