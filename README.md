@@ -59,6 +59,9 @@ There are two kind of labels:
   - Pr-welcome:
     Tasks friendly to new contributors. These tasks are only closed when they are done.
 
+  - Comms:
+    Tasks that need to be performed by project stakeholders and are related to any communication that needs to take place before a release.
+
 ### Columns
 
 #### Triage column
@@ -86,11 +89,9 @@ Smaller prioritized backlog with cards that will be worked on in the two upcomin
 
 If there is an urgent bug, it can be moved directly here.
 
-#### Blocked column
+#### Comms/Dependencies column
 
-Well this column is used for blocked items.
-
-A description why this issue is blocked should exist in the card.
+This column holds all the tasks that require collaboration with project stakeholders
 
 #### In Progress column
 
