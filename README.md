@@ -1,6 +1,6 @@
 # Mozilla Sumo & Community
 
-This repository is used to track anything related to the platform that powers SUMO, Playstore Support and Community Projects.
+This repository is used to track anything related to the platform that powers SuMo and any other proejcts the team might be working on.
 
 ## Engineering Board
 
@@ -11,32 +11,23 @@ A project is defined as a standalone chunk of work for a specific property. Rece
 
 Work outside of projects usually falls under the Keep the Lights On category (KTLO).
 
-### GitHub Milestones and Epics
+### GitHub Milestones
 
-We are using epics to better organize the work that a project needs in order to be completed. An epic is a concrete chunk of work and is organized into milestones. An epic can have one or more milestones. Milestones contain the individual tasks.
+We are using milestones to better organize the work that a project needs in order to be completed. A milestone is a concrete chunk of work and each project can have more than one milestones.
 
 An example of the above structure is:
 
 - Site Redesign - project
-  - create designs - Epic
-    - Milestone1
-      - GH issue
-      - GH issue
-      - GH issue
-    - Milestone2
-      - GH issue
-      - GH issue
-  - implement designs - Epic
-    - Milestone3
-      - GH issue
-      - GH issue
-      - GH issue
-    - Milestone4
-      - GH issue
-      - GH issue
-      - GH issue
+  - create designs - Milestone1
+    - GH issue
+    - GH issue
+    - GH issue
+  - implement designs - Milestone2
+    - GH issue
+    - GH issue
+    - GH issue
 
-The only execption to the above is the KTLO milestone. It does not belong to any epics and it is used as a group selector for all tasks in all properties.
+The only execption to the above is the KTLO milestone which is used as a group selector for all relevant tasks that fall under that.
 
 ### Labels
 
@@ -45,10 +36,12 @@ We are not using priority labels. Priority is determined by the position of a ca
 
 There are two kind of labels:
 
-- Labels that correspond to a specific project (kitsune vs respond). There are as many labels as the projects that the team is working on. Available labels are:
+- Labels that correspond to a specific property. There should be as many labels as the properties that the team is working on + 1. Available labels are:
+
   - Kitsune
-  - Respond
-  - Community projects
+  - Other
+    Catch-all identifier for non-sumo work. If there is a need it can break down to specific projects.
+
 - Labels used to highlight an issue. This is a short list of labels.
 
   - Bug:
@@ -74,10 +67,6 @@ A card from here either moves to the `Backlog`, `Next Items` or it is closed.
 
 **A card can be closed, even if it is valid, if it is not going to be worked on in more than six months**.
 
-#### Epics
-
-The list of epics for the project that the team works on. Epics stay in this column until all tasks are done and then are closed.
-
 #### Backlog column
 
 A backlog of tasks that will be worked in the next three months.
@@ -89,9 +78,9 @@ Smaller prioritized backlog with cards that will be worked on in the two upcomin
 
 If there is an urgent bug, it can be moved directly here.
 
-#### Comms/Dependencies column
+#### Comms/Dependencies/Blocked column
 
-This column holds all the tasks that require collaboration with project stakeholders
+This column holds all the tasks that require collaboration with project stakeholders or there are blocked for any reason.
 
 #### In Progress column
 
@@ -122,7 +111,3 @@ An effort should be put to keep this column short.
 #### Done column
 
 That's all!
-
-## SUMO PM & Design Board
-
-TBD
