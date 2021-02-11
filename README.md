@@ -111,3 +111,7 @@ An effort should be put to keep this column short.
 #### Done column
 
 That's all!
+
+## Release notes
+
+After each release, we are posting a summary of what happened in [Discourse](https://discourse.mozilla.org/c/sumo/22).
