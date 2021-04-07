@@ -91,7 +91,11 @@ A card is moved to the next column only when a PR is opened.
 
 #### Review column
 
-Anything that waits for a review. An issue is moved to the next column **only** when merged and deployed to a testing environment.
+Anything that waits for a review. An issue is moved to the next column only when merged.
+
+#### Review column
+
+Merged in the default branch but pending deployement to a testing environment. 
 
 #### QA column
 
