@@ -93,7 +93,7 @@ A card is moved to the next column only when a PR is opened.
 
 Anything that waits for a review. An issue is moved to the next column only when merged.
 
-#### Review column
+#### Merged column
 
 Merged in the default branch but pending deployement to a testing environment. 
 
