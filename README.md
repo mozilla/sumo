@@ -1,15 +1,16 @@
-# Mozilla Sumo & Community
+# Mozilla Sumo
 
-This repository is used to track anything related to the platform that powers SuMo and any other proejcts the team might be working on.
+This repository is used to track anything related to the platform that powers SuMo and any other projects the team might be working on.
 
 ## Engineering Board
 
-Short description of the current workflow of the team.
-
-We are working mostly with projects. A project signifies the team's focus for a period of time. Usually we are are working on a single project per property at a time.
+We are working mostly with projects. A project signifies the team's focus for a period of time. Usually there are one or two active projects at a time.
 A project is defined as a standalone chunk of work for a specific property. Recent examples of projects were the redesign of the SUMO site, integrating Firefox Accounts etc.
 
-Work outside of projects usually falls under the Keep the Lights On category (KTLO).
+As a rule of thumb, a project is defined as work that requires more than one tasks to be completed and takes more than 3 working days. Anything that doesn't fall in the project category
+is a standalone issue. In most of the cases, these issues are bugs.
+
+_The board will only display either standalone issues or the issues of the active project(s) in order to avoid clutter._
 
 ### GitHub Milestones
 
@@ -27,56 +28,35 @@ An example of the above structure is:
     - GH issue
     - GH issue
 
-The only execption to the above is the KTLO milestone which is used as a group selector for all relevant tasks that fall under that.
+Not active rojects may have a placeholder milestone in the form of a Inbox if there are already existing issues in board. This is purely for organization reasons.
 
 ### Labels
 
 Labels are used to easily distinguish cards that have them attached. We should keep them to the minimum in order for the cards that hold them to easily stand out.
 We are not using priority labels. Priority is determined by the position of a card in the board.
 
-There are two kind of labels:
+We have the following labels to highlight an issue:
 
-- Labels that correspond to a specific property. There should be as many labels as the properties that the team is working on + 1. Available labels are:
+- Bug:
+  Something is not working properly.
 
-  - Kitsune
-  - Other
-    Catch-all identifier for non-sumo work. If there is a need it can break down to specific projects.
+  _Any issue that has the bug label should also be assigned to the KTLO GitHub milestone regardless of the severity of the bug._
 
-- Labels used to highlight an issue. This is a short list of labels.
+- Pr-welcome:
+  Tasks friendly to new contributors. These tasks are only closed when they are done.
 
-  - Bug:
-    Something is not working properly.
-
-    _Any issue that has the bug label should also be assigned to the KTLO GitHub milestone regardless of the severity of the bug._
-
-  - Pr-welcome:
-    Tasks friendly to new contributors. These tasks are only closed when they are done.
-
-  - Comms:
-    Tasks that need to be performed by project stakeholders and are related to any communication that needs to take place before a release.
+- Comms:
+  Tasks that need to be performed by project stakeholders and are related to any communication that needs to take place before a release.
 
 ### Columns
 
-#### Triage column
+#### Triage/Parking Lot column
 
-Catch-all column. Anything filed in this repository goes to this column.
-Triage should happen regularly and the column should not have many cards.
-An exception to this are the cards that hold the `pr-welcome` label.
-
-A card from here either moves to the `Backlog`, `Next Items` or it is closed.
-
-**A card can be closed, even if it is valid, if it is not going to be worked on in more than six months**.
+This column only holds standalone issues and projects that are not currently active.
 
 #### Backlog column
 
-A backlog of tasks that will be worked in the next three months.
-Ideally meta-issues should be used here.
-
-#### Next items column
-
-Smaller prioritized backlog with cards that will be worked on in the two upcoming weeks. Should be sparsely populated and frequently updated.
-
-If there is an urgent bug, it can be moved directly here.
+Hold the tasks of individual _active_ milestone(s) or standalone tickets that will be worked on within a few weeks.
 
 #### Comms/Dependencies/Blocked column
 
@@ -84,8 +64,7 @@ This column holds all the tasks that require collaboration with project stakehol
 
 #### In Progress column
 
-Anything that it's actively worked on.
-Ideally nobody should own more that three cards in this column.
+Specific tasks that are actively worked on by the team.
 
 A card is moved to the next column only when a PR is opened.
 
@@ -95,7 +74,7 @@ Anything that waits for a review. An issue is moved to the next column only when
 
 #### Merged column
 
-Merged in the default branch but pending deployement to a testing environment. 
+Merged in the default branch but pending deployment to a testing environment.
 
 #### QA column
 
