@@ -28,7 +28,7 @@ An example of the above structure is:
     - GH issue
     - GH issue
 
-Not active rojects may have a placeholder milestone in the form of a Inbox if there are already existing issues in board. This is purely for organization reasons.
+Not active projects may have a placeholder milestone in the form of a Inbox if there are already existing issues in board. This is purely for organization reasons.
 
 ### Labels
 
@@ -45,8 +45,11 @@ We have the following labels to highlight an issue:
 - Pr-welcome:
   Tasks friendly to new contributors. These tasks are only closed when they are done.
 
-- Comms:
-  Tasks that need to be performed by project stakeholders and are related to any communication that needs to take place before a release.
+- Project specific labels:
+  - oidc
+  - other
+
+  If an issue does not have a label then it belongs to kitsune. 
 
 ### Columns
 
