@@ -46,24 +46,29 @@ We have the following labels to highlight an issue:
   Tasks friendly to new contributors. These tasks are only closed when they are done.
 
 - Project specific labels:
+
   - oidc
   - other
 
-  If an issue does not have a label then it belongs to kitsune. 
+  If an issue does not have a label then it belongs to kitsune.
 
 ### Columns
 
-#### Triage/Parking Lot column
+#### Triage
 
-This column only holds standalone issues and projects that are not currently active.
+Default column for incoming issues. Only holds issues that have not been proccessed yet.
 
 #### Backlog column
 
+Our Parking Lot. Issues that are valid but not yet an immediate priority.
+
+#### Next Items
+
 Hold the tasks of individual _active_ milestone(s) or standalone tickets that will be worked on within a few weeks.
 
-#### Comms/Dependencies/Blocked column
+#### Projects, Epics and Blocked Items
 
-This column holds all the tasks that require collaboration with project stakeholders or there are blocked for any reason.
+This column holds all the tasks that require collaboration with project stakeholders or are blocked for any reason. It is also a placeholder for Project/Epic cards. Single cards that hold all the information relevant to a project, links to documentation and its milestones.
 
 #### In Progress column
 
