@@ -11,7 +11,7 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **Preconditions**
-The necesarry actions to perform before executing the steps.
+The necessary actions to perform before executing the steps.
 
 **Steps to reproduce**
 Steps to reproduce the behavior:
