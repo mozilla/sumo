@@ -1,20 +1,21 @@
 ---
 name: Project Request
 about: Project Intake template
-title: "[project]"
+title: ""
 labels: Project/Epic
 assignees: ''
+projects: "https://github.com/orgs/mozilla/projects/225"
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
+**Briefly describe the Initiative.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-**Describe the solution you'd like**
+**Describe the milestones if any**
 A clear and concise description of what you want to happen.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Add any related issues**
+Add the issues this project is tracked by
 
 **What is the requested timeline for completion?**
 Ideal timeline for this project proposal.
