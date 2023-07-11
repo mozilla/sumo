@@ -4,7 +4,6 @@ about: Project Intake template
 title: ""
 labels: Project/Epic
 assignees: ''
-projects: "https://github.com/orgs/mozilla/projects/225"
 
 ---
 
