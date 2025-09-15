@@ -1,0 +1,51 @@
+<!--
+  Improved mobile layout for revision filter form
+  Issue: https://github.com/mozilla/sumo/issues/2525
+  
+  This template improves the mobile layout by ensuring proper field grouping
+  and responsive behavior for the revision filter form.
+-->
+
+{% extends "wiki/base.html" %}
+{% from "includes/common_macros.html" import for_contributors_sidebar %}
+
+{% set scripts = ('wiki', 'wiki.diff') %}
+{% set title = _('Recent Revisions') %}
+{% set crumbs = [(None, title)] %}
+{% set meta = [('robots', 'noindex, nofollow')] %}
+{% set ga_content_group = "kb-cms" %}
+
+{% block side_top %}
+  <nav id="doc-tools">
+    <ul class="sidebar-nav sidebar-folding">
+      {{ for_contributors_sidebar(user, settings.WIKI_DEFAULT_LANGUAGE, menu="contributor-tools", locale=locale, is_collapsible=True, active="wiki.revisions") }}
+    </ul>
+  </nav>
+{% endblock %}
+
+{% block content %}
+<section class="sumo-page-section">
+  <h1 class="sumo-page-heading">{{ title }}</h1>
+</section>
+{% endblock %}
+
+{% block below_main %}
+  <article id="revision-list">
+    <form class="filter inline-label is-condensed revision-filter-form" action="{{ url('wiki.revisions') }}">
+      <div class="filter-row">
+        {% for field in form %}
+          <div class="field-wrapper">
+            {{ field.label }}
+            {{ field }}
+          </div>
+        {% endfor %}
+      </div>
+      <button class="btn btn-submit">{{ _('Submit') }}</button>
+      <img src="{{ webpack_static('sumo/img/wait-trans.gif') }}" class="loading" alt="" />
+    </form>
+
+    <div id="revisions-fragment">
+      {% include "wiki/includes/recent_revisions_fragment.html" %}
+    </div>
+  </article>
+{% endblock %}

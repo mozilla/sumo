@@ -1,0 +1,100 @@
+/* 
+ * Fix for mobile layout of revision filter form
+ * Issue: https://github.com/mozilla/sumo/issues/2525
+ * 
+ * The "Bots" checkbox was appearing in the center of the screen on mobile
+ * and the "Start" label was not wrapping to a new line as expected.
+ */
+
+/* Mobile-specific fixes for revision filter form */
+@media screen and (max-width: 768px) {
+  /* Override inline-label behavior on mobile for filter forms */
+  .filter.inline-label.is-condensed {
+    display: block !important;
+  }
+  
+  /* Each form field should be full width and stacked vertically */
+  .filter.inline-label.is-condensed > * {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 12px;
+    margin-right: 0 !important;
+  }
+  
+  /* Labels should be above their inputs on mobile */
+  .filter.inline-label.is-condensed label {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 4px !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Input fields should be full width except checkboxes */
+  .filter.inline-label.is-condensed input:not([type="checkbox"]),
+  .filter.inline-label.is-condensed select {
+    display: block !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    flex: none !important;
+  }
+  
+  /* Checkbox fields need special handling */
+  .filter.inline-label.is-condensed input[type="checkbox"] {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 8px !important;
+    vertical-align: top;
+  }
+  
+  /* Specific fix for the "Bots" checkbox issue */
+  .filter.inline-label.is-condensed label[for="id_include_bots"] {
+    display: flex !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+  }
+  
+  .filter.inline-label.is-condensed input[id="id_include_bots"] {
+    margin-right: 8px !important;
+    margin-top: 2px; /* Align with label text */
+  }
+  
+  /* Force the "Start:" and other date labels to be on new lines */
+  .filter.inline-label.is-condensed label[for="id_start"],
+  .filter.inline-label.is-condensed label[for="id_end"] {
+    clear: both;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 16px;
+  }
+  
+  /* Submit button styling */
+  .filter.inline-label.is-condensed .btn-submit {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+  }
+  
+  /* Loading indicator */
+  .filter.inline-label.is-condensed .loading {
+    display: block;
+    margin: 8px auto;
+  }
+}
+
+/* Additional fix for very small screens */
+@media screen and (max-width: 480px) {
+  .filter.inline-label.is-condensed {
+    padding: 16px;
+    margin: 0 -16px;
+  }
+  
+  .filter.inline-label.is-condensed label {
+    font-size: 14px;
+  }
+  
+  .filter.inline-label.is-condensed input,
+  .filter.inline-label.is-condensed select {
+    font-size: 16px; /* Prevent zoom on iOS */
+    padding: 12px;
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Revisions Fix - Test Page</title>
+    <style>
+        /* Base styles - simplified version of the original */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Original problematic styles */
+        .filter.inline-label.is-condensed {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .filter.inline-label.is-condensed label {
+            width: 175px;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+        
+        .filter.inline-label.is-condensed input,
+        .filter.inline-label.is-condensed select {
+            flex: 1 1 auto;
+            width: auto;
+            margin-right: 12px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .filter.inline-label.is-condensed input[type="checkbox"] {
+            width: auto;
+            flex: none;
+        }
+        
+        .btn-submit {
+            background: #0060df;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Include the mobile fix */
+    </style>
+    <link rel="stylesheet" href="mobile-revisions-fix.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Revision Filter - Mobile Fix Test</h1>
+        
+        <p><strong>Instructions:</strong> Resize your browser window to mobile width (≤768px) or view on a mobile device to see the fix in action.</p>
+        
+        <h2>Before Fix (Original Layout):</h2>
+        <div class="problem-demo">
+            <p style="color: #d73a4a;">❌ On mobile, this layout breaks:</p>
+            <ul>
+                <li>Checkbox appears in center of screen</li>
+                <li>"Start:" label doesn't wrap properly</li>
+                <li>Form is difficult to use</li>
+            </ul>
+        </div>
+        
+        <h2>After Fix (With Mobile CSS):</h2>
+        <form class="filter inline-label is-condensed" action="#" method="get">
+            <label for="id_locale">Locale:</label>
+            <select id="id_locale" name="locale">
+                <option value="">Any</option>
+                <option value="en-US">English (en-US)</option>
+                <option value="es">Español (es)</option>
+            </select>
+            
+            <label for="id_users">Users:</label>
+            <input type="text" id="id_users" name="users" placeholder="username1, username2">
+            
+            <label for="id_include_bots">Bots:</label>
+            <input type="checkbox" id="id_include_bots" name="include_bots">
+            
+            <label for="id_start">Start:</label>
+            <input type="date" id="id_start" name="start">
+            
+            <label for="id_end">End:</label>
+            <input type="date" id="id_end" name="end">
+            
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+        
+        <h2>Expected Behavior on Mobile:</h2>
+        <div class="success-demo">
+            <p style="color: #28a745;">✅ With the fix applied:</p>
+            <ul>
+                <li>All labels appear above their inputs</li>
+                <li>"Bots:" checkbox is properly aligned with its label</li>
+                <li>"Start:" and "End:" labels each appear on new lines</li>
+                <li>Form is fully usable on mobile devices</li>
+                <li>Desktop layout remains unchanged</li>
+            </ul>
+        </div>
+        
+        <h2>Technical Details:</h2>
+        <p>The fix uses CSS media queries to override the flex layout on mobile devices (≤768px) and implements a vertical stacking layout that's more appropriate for mobile screens.</p>
+        
+        <details>
+            <summary>View CSS Fix</summary>
+            <pre style="background: #f8f8f8; padding: 16px; border-radius: 4px; overflow-x: auto; font-size: 12px;">
+@media screen and (max-width: 768px) {
+  .filter.inline-label.is-condensed {
+    display: block !important;
+  }
+  
+  .filter.inline-label.is-condensed > * {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 12px;
+    margin-right: 0 !important;
+  }
+  
+  /* Special handling for checkboxes */
+  .filter.inline-label.is-condensed input[type="checkbox"] {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 8px !important;
+  }
+}
+            </pre>
+        </details>
+    </div>
+</body>
+</html>
